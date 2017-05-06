@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+section {
+  font-size: 1.3em;
+}
+
+/* WRAPPER */
+
+#wrapper {
+  padding : 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/* DEBUT HEADER */
+header {
+  height : 8em;
+  background-image:  none;
+}
+
+header h1 {
+  font-size: 3em;
+  line-height:2.5em;
+  font-family: 'Architects Daughter', cursive;
+  margin-top: 40px;
+}
+/* FIN HEADER */
+
+/* DEBUT MENU */
+
+nav {
+  top :0px;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+#menu {
+    display : none;
+}
+
+nav ul {
+    margin: 8px 0;
+}
+
+nav ul li {
+  float: none;
+  background: #000;
+  opacity : inherit;
+  background-image: none;
+  position: relative;
+}
+
+nav ul li:hover {
+  background: #FF3300;
+  background-image: none;
+}
+
+nav ul li:hover a {
+  color: #FFF;
+}
+
+#active a {
+    color: #FFF;
+}
+
+#menuMobile{
+  display : block;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 8%;
+  margin-left: 8%;
+  height: 20px;
+  margin-top: 8px;
+}
+
+#menuMobile:before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 8%;
+  width: 8%;
+  border-top: 2px solid #fff;
+}
+
+#menuMobile:hover {
+  background-color: inherit;
+  cursor: pointer;
+  border-top: 2px solid #FF3300;
+  border-bottom: 2px solid #FF3300;
+}
+
+#menuMobile:hover:before {
+  border-top: 2px solid #FF3300;
+}
+
+#menuMobile:hover ~ #menu, #menu:hover{
+  display : block;
+}
+
+.sous-menu{
+  width : 100%;
+  margin-top: 0px;
+  position : absolute;
+  top : 0px;
+  left : 100%;
+}
+
+.sous-menu li {
+
+  width : 200%;
+  background-color: #000 ;
+  opacity : 1;
+  background-image: none;
+}
+
+.sous-menu li:hover {
+  background-color: #FF3300 ;
+  background-image: none;
+}
+
+.sous-menu li a {
+  color: #FFF;
+  font-size: 0.6em;
+  margin-left: 5%;
+}
+
+.sous-menu li:hover a {
+  color: #FFFFFF;
+}
+
+/* FIN MENU */
+
+
+/* DEBUT CONTENU PAGE ACCUEIL */
+
+#liste-recettes{
+  flex-direction: column;
+}
+
+div.recette {
+  width: 100%;
+}
+
+.recette-ident figure, .spec{
+  width: 40%;
+}
+
+.accroche{
+    padding : 0 10px;
+}
+
+.button{
+  width:45%;
+  height: 3em;
+}
+
+.button a {
+  font-size : 0.8em;
+}
+
+/* FIN CONTENU PAGE ACCUEIL*/
+
+/* DEBUT CONTENU PAGES DETAIL */
+
+#resume {
+  flex-direction: column;
+  height : 400px;
+}
+
+#resume figure {
+  width : 50%;
+}
+
+/* FIN CONTENU PAGES DETAIL */
+
+

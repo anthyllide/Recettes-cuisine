@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+		<title>La popotte d'Alex</title>
+		<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+		<link type="text/css" rel="stylesheet" media="screen" href="css/style-desktop.css" />
+		<link type="text/css" rel="stylesheet" media="screen and (max-width:500px)" href="css/style-mobile.css" />
+        <link type="text/css" rel="stylesheet" media="print" href="css/style-print.css" />
+		<script src="js/script.js"></script>
+	</head>
+	<body onload="load();">
+		<div id="wrapper">
+			<!-- DEBUT HEADER -->
+			<header>
+				<nav>
+					<div id="menuMobile">
+						<a href=""></a>
+					</div>
+					<ul id="menu">
+						<li id="active"><a href="#" onclick="displayAccueil()">Accueil</a></li>
+						<li id="menu1"><a href="#">Entrées</a>
+							<ul class="sous-menu">
+							</ul>
+						</li>
+						<li id="menu2" ><a href="#">Plats</a>
+							<ul class="sous-menu">
+							</ul>
+						</li>
+						<li id="menu3"><a href="#">Desserts</a>
+							<ul class="sous-menu">
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<form method="get" action="javascript:void(0)" onsubmit="findstr();" name="search">
+					<div class="popup" onclick="displayPopup()"><img src="images/aide.png"/>
+						<span class="popuptext" id="myPopup">REGLES DE RECHERCHE<br /><br />
+							* Pour une recherche simple : tapez un mot.<br /><br />
+							* Pour une recherche par ingrédient, tapez "ingredient=" suivi de l'ingrédient
+							que vous recherchez.<br />
+							ex : "ingredient=sucre" recherche les recettes contenant du sucre comme ingrédient.<br/>
+							ATTENTION : Ne pas mettre d'espace entre le "=".<br /><br />
+							* Pour une recherche par avis, tapez "avis=" suivi du nombre d'étoiles<br />
+							ex : "avis=5" recherche les recettes contenant un avis 5 étoiles.<br/>
+							ATTENTION : Ne pas mettre d'espace entre le "=".<br /><br />
+							* Pour rechercher deux mots, tapez "mot1" suivi de "&", puis de "mot2"<br />
+							ex : "sucre&farine" recherche les recettes où figurent les mots sucre et farine.<br />
+							ATTENTION : Ne pas mettre d'espace entre le "&".<br /><br />
+							* Pour une recherche par ingredient et par avis, tapez "ingredient=" suivi de "&", puis "avis="<br />
+							ex : "avis=4&ingredient=farine" recherche les recettes qui ont un avis 4 étoiles et ont comme
+							ingrédient de la farine.<br />
+							ATTENTION : Ne pas mettre d'espace entre le "&".
+						</span>
+					</div>
+					<input type="text" name="searchStr" value="" placeholder="Que recherchez vous ?" />
+					<input type="submit"  value="RECHERCHER"/>
+				</form>
+				<h1>La popotte d'Alex</h1>
+			</header>
+			<!-- FIN HEADER -->
+			<!-- DEBUT SECTION LISTE RECETTES -->
+			<section id="liste-recettes">
+				<p id="resultSearch">Aucune recette correspond à votre recherche<br /> ou bien la syntaxe de la recherche
+					n'est pas correcte (voir aide en cliquant sur le point "?" à gauche du champ de recherche).</p>
+			</section>
+			<!-- FIN SECTION LISTE RECETTES -->
+			<!-- DEBUT SECTION DETAIL RECETTES -->
+			<section id="detail-recettes">
+			</section>
+			<!-- FIN SECTION DETAIL RECETTES -->
+			<!-- DEBUT FOOTER -->
+			<footer>
+			Fait par Alexandra Gonzalez 10-2016
+			</footer>
+			<!-- FIN FOOTER -->
+		</div>
+	</body>
+</html>

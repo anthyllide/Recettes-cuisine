@@ -1,0 +1,461 @@
+@charset "UTF-8";
+
+/* remise à 0 des marges et padding */
+* {
+  margin : 0;
+  padding : 0;
+}
+
+/* BALISES GENERALES */
+section, article, nav, aside, header, footer, button {
+  display : block; /* pour les vieux navigateurs */
+}
+
+html {
+
+  background-image: url("../images/fond.gif");
+
+}
+
+a {
+  color : #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+figure img {
+  max-width : 100%;
+}
+
+h2{
+  color: #FF6633;
+  font-weight: bold;
+}
+
+article{
+  padding: 5px;
+  margin-top: 20px;
+}
+
+section {
+  font-size: 1.5em;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%; /* 1em = 10px */
+  color : #000;
+}
+
+/* WRAPPER */
+
+#wrapper {
+  max-width: 960px;
+  background-color: #FFF;
+  padding : 12px;
+  margin : auto;
+  -moz-box-shadow: 5px 3px 2px 0px #fe996b;
+  -webkit-box-shadow: 5px 3px 2px 0px #fe996b;
+  -o-box-shadow: 5px 3px 2px 0px #fe996b;
+  box-shadow: 5px 3px 2px 0px #fe996b;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* DEBUT HEADER */
+header {
+  height : 14em;
+  margin : 80px 0 30px 0;
+  background-image:  url("../images/food-smiley2.png");
+  background-repeat: no-repeat;
+  background-position: 23% 80%;
+  background-color: #FF6600;
+  border-radius: 3px;
+  position: relative; /* pour placer le menu en fixed par rapport au header */
+}
+
+header h1 {
+  color: #FFF;
+  font-size: 4em;
+  text-align: center;
+  line-height:3em;
+  font-family: 'Architects Daughter', cursive;
+  margin-top: 40px;
+}
+/* FIN HEADER */
+
+/* DEBUT POPUP */
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 3000%;/*450px*/
+  font-size: 12px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 200;
+  bottom: -1770%;
+  left: -800%;
+  margin-left: -80px;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* FIN POPUP */
+
+/* DEBUT FORM */
+form {
+  position : absolute;
+  top : -35px;
+  right: 0px;
+}
+form  input[type='submit'] {
+  cursor : pointer;
+}
+
+#resultSearch {
+
+  width : 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display : none;
+
+}
+
+/*FIN FORM */
+
+/* DEBUT MENU */
+
+nav {
+  height : 40px;
+  position:fixed;
+  left:0;
+  top :2px;
+  width: 100%;
+  z-index: 100;
+}
+
+/* BOUTON HAMBURGER POUR VERSION MOBILE */
+#menuMobile {
+  display : none;
+}
+
+nav ul {
+  margin : 0 auto; /* centrer le menu */
+  max-width: 960px ;
+}
+
+nav ul li {
+  float: left;
+  width: 24.625%;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 0.5%;
+  font-size: 1.5em;
+  text-align: center;
+  background: #FF3300;
+  background-image: -webkit-linear-gradient(top, #FF3300, #d98634);
+  background-image: -moz-linear-gradient(top, #FF3300, #d98634);
+  background-image: -ms-linear-gradient(top, #FF3300, #d98634);
+  background-image: -o-linear-gradient(top, #FF3300, #d98634);
+  background-image: linear-gradient(to bottom, #FF3300, #d98634);
+}
+
+nav ul li:hover {
+  background: #d98634;
+  background-image: -webkit-linear-gradient(top, #d98634, #FF3300);
+  background-image: -moz-linear-gradient(top, #d98634, #FF3300);
+  background-image: -ms-linear-gradient(top, #d98634, #FF3300);
+  background-image: -o-linear-gradient(top, #d98634, #FF3300);
+  background-image: linear-gradient(to bottom, #d98634, #FF3300);
+}
+
+
+nav ul li:last-child{
+  margin-right: 0px;
+}
+
+nav ul li a {
+  display : block;
+  color : #FFF;
+}
+
+nav ul li:hover a {
+  color : #000;
+}
+
+nav ul li:hover .sous-menu {
+  display : block;
+}
+
+#active a {
+  color : #000;
+}
+
+.sous-menu{
+  height: 300%;
+  display:none;
+  margin-top: -2px;
+}
+
+.sous-menu li {
+  clear : both;
+  width : 100%;
+  text-align: left;
+  background: #FF3300 ;
+  background-image: none;
+}
+
+.sous-menu li:hover {
+  background: #FF3300 ;
+  background-image: none;
+}
+
+.sous-menu li a {
+  color: #FFF;
+  font-size: 0.6em;
+  margin-left: 5%;
+  cursor : pointer;
+}
+
+.sous-menu li:hover a {
+  color: #FFFFFF;
+}
+
+/* FIN MENU */
+
+/* DEBUT CONTENU PAGE ACCUEIL */
+
+#intro{
+  margin : 15px auto;
+  font-size: 1.5em;
+  border: 2px solid #FF6600;
+  -moz-box-shadow: 3px 3px 10px 0px #fe996b;
+  -webkit-box-shadow: 3px 3px 10px 0px #fe996b;
+  -o-box-shadow: 3px 3px 10px 0px #fe996b;
+  box-shadow: 3px 3px 10px 0px #fe996b;
+}
+
+#intro h2 {
+  margin-bottom:10px;
+  font-size: 1.2em;
+}
+
+#intro p span {
+  color : #FF3300;
+}
+
+#liste-recettes{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+div.recette{
+  display : flex;
+  flex-direction: column;
+  /*border : 1px solid black;*/
+  width : 47.185%;
+  padding: 5px;
+  height: 280px;
+  margin-bottom: 20px;
+  background-color: #fe996b;
+  -moz-box-shadow: 5px 4px 5px 0px #c0c0c0;
+  -webkit-box-shadow: 5px 4px 5px 0px #c0c0c0;
+  -o-box-shadow: 5px 4px 5px 0px #c0c0c0;
+  box-shadow: 5px 4px 5px 0px #c0c0c0;
+  cursor : pointer;
+}
+
+.recette h3 {
+  display: flex;
+  margin: 10px auto; /* centre le contenu du titre */
+  color : #FF3300;
+  font-weight: bold;
+}
+
+.recette-ident{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding : 10px 5px;
+}
+
+.recette-ident figure, .spec{
+  width: 45%;
+}
+
+.spec li {
+  margin-bottom : 10px;
+  text-transform: uppercase;
+}
+
+.spec li:before{
+  content:'→';
+  font-size : 1.2em;
+  margin-right: 5px;
+  color : #FF3300;
+  font-weight: bolder;
+}
+
+.accroche {
+  text-align: center;
+}
+
+.button{
+  display : flex;
+  width:30%;
+  height: 2em;
+  margin : auto;
+  cursor: pointer;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff,  #FF3300);
+  background-image: -moz-linear-gradient(top, #ffffff,  #FF3300);
+  background-image: -ms-linear-gradient(top, #ffffff,  #FF3300);
+  background-image: -o-linear-gradient(top, #ffffff,  #FF3300);
+  background-image: linear-gradient(to bottom, #ffffff,  #FF3300);
+  border: solid #000 1px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+
+.button a {
+  display : block;
+  margin : auto;
+  font-size : 0.8em;
+}
+
+.button:hover {
+  background:  #FF3300;
+  background-image: -webkit-linear-gradient(top,  #FF3300, #ffffff);
+  background-image: -moz-linear-gradient(top,  #FF3300, #ffffff);
+  background-image: -ms-linear-gradient(top,  #FF3300, #ffffff);
+  background-image: -o-linear-gradient(top,  #FF3300, #ffffff);
+  background-image: linear-gradient(to bottom,  #FF3300, #ffffff);
+}
+/* FIN CONTENU PAGE ACCUEIL*/
+
+/* DEBUT CONTENU PAGES DETAIL */
+
+.ficheRecette{
+  border: 2px solid #FF6600;
+  -moz-box-shadow: 3px 3px 10px 0px #fe996b;
+  -webkit-box-shadow: 3px 3px 10px 0px #fe996b;
+  -o-box-shadow: 3px 3px 10px 0px #fe996b;
+  box-shadow: 3px 3px 10px 0px #fe996b;
+  margin-bottom: 20px;
+}
+
+#introDetailRecette h2{
+  color : #FF3300;
+  font-size: 1.6em;
+}
+
+#introDetailRecette p {
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+
+#resume {
+  display : flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height : 290px;
+  background-color: #fe996b;
+}
+
+#resume figure {
+  width : 35%;
+}
+
+#resume ul {
+  padding: 1em 3%;
+  height : 130px;
+  background-color: #FFF;
+  border : 1px solid black;
+}
+
+#resume ul li {
+  font-size: 0.7em;
+  margin-bottom : 10px;
+}
+
+#resume ul li span {
+  font-weight: bold;
+}
+
+#resume ul li img {
+  vertical-align: -2px;
+}
+
+#PrepareRecette h3 {
+  color : #FF3300;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+#PrepareRecette p {
+  font-size: 0.8em;
+}
+#PrepareRecette section {
+  margin-bottom: 20px;
+}
+
+#PrepareRecette section ul li{
+  font-size: 0.8em;
+}
+
+#PrepareRecette section ul li:before {
+  content:'»';
+  color : #FF3300;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+/* FIN CONTENU PAGES DETAIL */
+
+/* DEBUT FOOTER */
+
+footer {
+  text-align : center;
+  border-top : 1px solid #000;
+  padding: 12px 0;
+}
+
+/* FIN FOOTER */

@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+section, article, nav, aside, header, footer, button {
+    display : block; /* pour les vieux navigateurs */
+}
+
+html {
+    background-image: none;
+}
+
+a {
+    color : #000;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+figure img {
+    max-width : 100%;
+}
+
+h2{
+    color: #FF6633;
+    font-weight: bold;
+}
+
+article{
+    padding: 5pt;
+    margin-top: 20pt;
+}
+
+section {
+    font-size: 10pt;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%; /* 1em = 10px */
+    color : #000;
+}
+
+/* WRAPPER */
+
+#wrapper {
+    background-color: #FFF;
+    padding : 10pt;
+    margin : auto;
+
+}
+
+/* DEBUT HEADER */
+header {
+    height : 15pt;
+    background-color: #ffffff;
+}
+
+header h1 {
+    color: #000;
+    font-size: 25pt;
+    font-family: cursive;
+}
+/* FIN HEADER */
+
+/* DEBUT MENU */
+
+nav {
+   display : none;
+}
+
+/* FIN MENU */
+
+/* DEBUT CONTENU PAGE ACCUEIL */
+
+#intro{
+
+    margin : 15pt auto;
+    font-size: 10pt;
+}
+
+#intro h2 {
+    margin-bottom:10px;
+    font-size: 15pt;
+}
+
+#intro p span {
+    font-weight: bold;
+}
+
+div.recette{
+    display : flex;
+    flex-direction: column;
+    width : 100%;
+    padding: 5pt;
+    height: 250pt;
+    margin-top: 50pt;
+    margin-bottom: 50pt;
+    border-top : 1pt solid #000;
+    border-bottom : 1pt solid #000;
+}
+
+.recette h3 {
+    display: flex;
+    margin: 10pt auto; /* centre le contenu du titre */
+    color : #FF3300;
+    font-weight: bold;
+}
+
+.recette-ident{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding : 10pt 5pt;
+}
+
+.recette-ident figure, .spec{
+    width: 45%;
+}
+
+.spec li {
+    margin-bottom : 10pt;
+    text-transform: uppercase;
+}
+
+.spec li:before{
+    content:'→';
+    font-size : 10pt;
+    margin-right: 5pt;
+    color : #FF3300;
+    font-weight: bolder;
+}
+
+.accroche {
+    text-align: center;
+}
+
+.button{
+    display : none;
+}
+
+.button a {
+    display : none;
+}
+
+/* FIN CONTENU PAGE ACCUEIL*/
+
+/* DEBUT CONTENU PAGES DETAIL */
+
+#introDetailRecette h2{
+    color : #FF3300;
+    font-size: 15pt;
+}
+
+#introDetailRecette p {
+    font-size: 10pt;
+    margin: 10pt 0;
+}
+
+#resume {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height : 145pt;
+    background-color: #fff;
+    margin-bottom: -30pt ;
+}
+
+#resume figure {
+    width : 40%;
+    border : 1pt solid #000;
+}
+
+#resume ul {
+    padding: 10pt;
+    height : 110pt;
+    background-color: #FFF;
+    border : 1pt solid black;
+}
+
+#resume ul li {
+    font-size: 10pt;
+    margin-bottom : 10pt;
+}
+
+#resume ul li span {
+    font-weight: bold;
+}
+
+#resume ul li img {
+    vertical-align: -2pt;
+}
+
+#PrepareRecette h3 {
+    color : #FF3300;
+    margin-bottom: 10pt;
+}
+
+#PrepareRecette section {
+    margin-bottom: 15pt;
+}
+
+#PrepareRecette section ul li:before {
+    content:'»';
+    color : #FF3300;
+    font-size: 15pt;
+    margin-right: 5pt;
+}
+
+/* FIN CONTENU PAGES DETAIL */
+
+/* DEBUT FOOTER */
+
+footer {
+  display : none;
+}
+
+/* FIN FOOTER */
